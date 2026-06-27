@@ -96,8 +96,10 @@
   document.addEventListener('click', function(e){
     var b = e.target.closest('[data-book]');
     var o = e.target.closest('[data-order]');
-    if(b){ e.preventDefault(); openModal(bookModal); }
-    if(o){ e.preventDefault(); openModal(orderModal); }
+    // Prefer the live Masul backend modal (real bookings/orders reach the
+    // restaurant). Fall back to the local modal only if the widget hasn't loaded.
+    if(b){ e.preventDefault(); if(window.MasulForms&&window.MasulForms.open){ window.MasulForms.open('booking'); } else { openModal(bookModal); } }
+    if(o){ e.preventDefault(); if(window.MasulForms&&window.MasulForms.open){ window.MasulForms.open('order'); } else { openModal(orderModal); } }
 
     if(e.target.closest('[data-close]')){ closeModal(bookModal); closeModal(orderModal); }
     if(e.target.classList && e.target.classList.contains('modal-veil')){ closeModal(e.target); }
