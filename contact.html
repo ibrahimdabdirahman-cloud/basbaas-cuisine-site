@@ -168,7 +168,13 @@
   document.getElementById('ctSubmit').addEventListener('click',function(){
     var inputs=form.querySelectorAll('input[required]');
     for(var i=0;i<inputs.length;i++){ if(!inputs[i].value){ inputs[i].focus(); inputs[i].style.borderColor='var(--orange)'; return; } }
-    form.innerHTML='<div class="ct-confirm"><div class="tick">&#10003;</div><h3 style="font-size:23px;margin-bottom:8px">Message sent</h3><p class="sub" style="margin:0">Thank you for reaching out — we\'ll get back to you very soon.</p></div>';
+    // Deliver the message for real: open the visitor's mail client pre-filled
+    // to the restaurant inbox. Without this the message went nowhere.
+    var name=(form.querySelector('input[type="text"]')||{}).value||'';
+    var email=(form.querySelector('input[type="email"]')||{}).value||'';
+    var msg=(form.querySelector('textarea')||{}).value||'';
+    window.location.href='mailto:basbaas28@gmail.com?subject='+encodeURIComponent('Website enquiry from '+name)+'&body='+encodeURIComponent('Name: '+name+'\nEmail: '+email+'\n\n'+msg);
+    form.innerHTML='<div class="ct-confirm"><div class="tick">&#10003;</div><h3 style="font-size:23px;margin-bottom:8px">Opening your email…</h3><p class="sub" style="margin:0">Your message to basbaas28@gmail.com is ready in your mail app — just hit send. Or call us on 0203 1962 607.</p></div>';
   });
 })();
 </script>
