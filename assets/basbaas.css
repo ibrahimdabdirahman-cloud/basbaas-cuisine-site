@@ -204,5 +204,22 @@ body.hero-overlay .site-header.scrolled{position:fixed;background:rgba(7,22,18,.
   .field-row{grid-template-columns:1fr}
 }
 @media(max-width:560px){
+  html,body{overflow-x:clip}
+  .wrap,.wrap-wide{padding-left:18px;padding-right:18px}
+  .nav{height:72px}
+  .brand{font-size:17px;gap:9px}
+  .brand-mark{width:38px;height:38px}
+  .hamburger{min-width:44px;min-height:44px;align-items:center;justify-content:center}
+  .mobile-nav{padding:76px 20px 28px;justify-content:flex-start;overflow-y:auto}
+  .mobile-nav a{font-size:clamp(24px,8vw,30px);padding:9px;min-height:44px}
+  .page-hero{padding:64px 0 44px}
+  .page-hero h1{font-size:clamp(40px,13vw,58px)}
+  .page-hero .lead{font-size:17px}
+  .btn{white-space:normal;text-align:center;justify-content:center;min-height:48px}
+  .modal-veil{padding:10px}
+  .modal-head{padding:24px 22px 0}
+  .modal-body{padding:18px 22px 24px}
+  .dish .nm{align-items:flex-start}
+  .foot-bot{margin-top:36px}
   .foot-grid{grid-template-columns:1fr}
 }
