@@ -22,8 +22,8 @@
   .q-hero .acts{margin-top:36px;display:flex;gap:12px;flex-wrap:wrap}
   .q-hero .hero-meta{margin-top:32px;display:flex;gap:12px;align-items:center;font-size:13px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;font-weight:600}
   .q-hero .hero-meta .dot{width:4px;height:4px;border-radius:50%;background:var(--gold)}
-  .q-hero-fig{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/5}
-  .q-hero-fig img{width:100%;height:100%;object-fit:cover}
+  .q-hero-fig{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:3/4;background:var(--paper-2)}
+  .q-hero-fig img{width:100%;height:100%;object-fit:contain}
   .hero-tag{position:absolute;left:22px;bottom:22px;background:rgba(250,246,238,.95);
     padding:14px 20px;border-radius:5px;font-size:13.5px;font-weight:600;color:var(--green);letter-spacing:.01em}
   .hero-tag span{display:block;font-weight:400;color:var(--muted);font-size:12px;margin-top:3px;letter-spacing:.02em}
@@ -46,7 +46,7 @@
   .sig-card-txt h2 .o{color:var(--orange)}
   .sig-card-txt p{color:rgba(240,232,216,.8);font-size:17.5px;line-height:1.7;max-width:42ch}
   .sig-card-img{position:relative;min-height:440px}
-  .sig-card-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .sig-card-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
 
   /* ---- menu preview ---- */
   .menu-prev{padding:0 0 104px}
@@ -57,8 +57,8 @@
   /* ---- gallery teaser ---- */
   .gal-teaser{padding:0 0 104px}
   .gal-grid{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:200px;gap:14px}
-  .gal-grid a{overflow:hidden;border-radius:5px;display:block}
-  .gal-grid img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+  .gal-grid a{overflow:hidden;border-radius:5px;display:block;background:var(--paper-2)}
+  .gal-grid img{width:100%;height:100%;object-fit:contain;transition:transform .7s var(--ease)}
   .gal-grid a:hover img{transform:scale(1.06)}
   .gal-grid .w2{grid-column:span 2}.gal-grid .h2{grid-row:span 2}
 
@@ -96,11 +96,8 @@
 <meta property="og:description" content="BasBaas Cuisine — authentic Somali food in SE18 London. Bold flavours from the Horn of Africa built around our signature Basbaas sauce.">
 <meta property="og:url" content="https://basbaas-cuisine-site.vercel.app/">
 <meta property="og:locale" content="en_GB">
-<meta property="og:image" content="https://basbaas-cuisine-site.vercel.app/assets/img/PHOTO-2026-01-10-17-43-36-3.jpg">
-<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="BasBaas Cuisine — Authentic Somali Food · SE18 London">
 <meta name="twitter:description" content="BasBaas Cuisine — authentic Somali food in SE18 London. Bold flavours from the Horn of Africa built around our signature Basbaas sauce.">
-<meta name="twitter:image" content="https://basbaas-cuisine-site.vercel.app/assets/img/PHOTO-2026-01-10-17-43-36-3.jpg">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -121,6 +118,11 @@
 }
 </script>
 <!-- seo:auto end -->
+<meta property="og:image" content="https://basbaas-cuisine-site.vercel.app/og-thumb.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://basbaas-cuisine-site.vercel.app/og-thumb.jpg" />
 </head>
 <body>
 
@@ -165,8 +167,8 @@
       <div class="hero-meta"><span>Dine in</span><span class="dot"></span><span>Takeaway</span><span class="dot"></span><span>SE18, London</span></div>
     </div>
     <div class="q-hero-fig reveal d1">
-      <img src="assets/img/basbaas-main.jpg" alt="Basbaas signature platter" loading="lazy" decoding="async">
-      <div class="hero-tag">Signature platter<span>Slow-cooked lamb · bariis · basbaas</span></div>
+      <img src="assets/img/basbaas-main.jpg" alt="Basbaas dining room seating area" loading="lazy" decoding="async">
+      <div class="hero-tag">Dine in<span>Sitting area</span></div>
     </div>
   </div>
 </section>
