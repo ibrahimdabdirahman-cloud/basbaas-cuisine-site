@@ -65,7 +65,7 @@ h1,h2,h3,h4{font-weight:600;letter-spacing:-.025em;line-height:1.04}
   backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
   border-bottom:1px solid var(--line);transition:background .3s,border-color .3s}
 .nav{display:flex;align-items:center;justify-content:space-between;height:84px}
-.brand{display:flex;align-items:center;gap:12px;font-weight:700;font-size:19px;letter-spacing:.005em;color:var(--green)}
+.brand{display:flex;align-items:center;gap:12px;font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:24px;letter-spacing:.04em;color:var(--green)}
 .brand img{height:42px;width:auto}
 /* real logo marks */
 .brand-mark{height:46px;width:46px;display:block;flex-shrink:0;border-radius:10px}
